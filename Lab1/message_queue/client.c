@@ -17,6 +17,8 @@ int MsgQInit(int key){
         perror("msgget error");
         return -1;
     }
+
+    return msgID;
 }
 
 int MsgQSnd(int msgID, void* buf, int size, int type){
